@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  easy_web_bypass:
+    build: .
+    environment:
+      - FLAG=FLAG{cmonbruhthatwaseasy}
+    ports:
+      - "8000:3000"

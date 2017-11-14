@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title 
+    %link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous")
+    %script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous")
+    %script(src="js/code.js")
+    %script(type='application/x-suppress')
+  %body(style="padding-top: 40px")
+    .container(style="width: 300px")
+      .flag
+      - @posts.each do |post|
+        %div
+          %blockquote
+            = post
+      %form(method="POST" action="/post" class="form-signin")
+        %h3.form-signin-heading
+          What are you thinking about?:
+        %input(type="text" id="post" name="post" class="form-control" placeholder="Post" required="" autocomplete="off")
+        %button(class="btn btn-small btn-primary btn-block" type="submit" style="margin-top: 10px;")
+          Enter
+      %form(method="POST" action="/reset_db" class="form-signin")
+        %button(class="btn btn-small btn-secondary" type="submit" style="margin-top: 10px;")
+          Reset Database
+      
+      
+      %div(id="username-output")
+        - unless @username.nil?
+          == Hi #{@username}!
+
+    %script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"

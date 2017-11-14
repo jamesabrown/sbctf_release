@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  easy_xss_one:
+    build: .
+    environment:
+      - FLAG=FLAG{youcallthatxssbro?}
+    ports:
+      - "8000:3000"
