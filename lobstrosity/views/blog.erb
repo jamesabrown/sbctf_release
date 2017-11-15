@@ -1,0 +1,8 @@
+<h1>Welcome to your blog!</h1>
+<h3>Post something</h3>
+<form action='/upload' enctype="multipart/form-data" method='POST'>
+    <textarea name="blog_post" rows="5" cols="50"></textarea>
+    <input type="submit" value="Upload" />
+</form>
+
+<p><%= @blog_posts %></p>

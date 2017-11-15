@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  lobstrosity:
+    environment:
+      - FLAG=flag{andthegunslingerfollowed}
+    build: .
+    ports:
+      - "7002:4567"
