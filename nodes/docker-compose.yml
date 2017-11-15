@@ -1,0 +1,34 @@
+version: '3'
+services:
+ 
+  flask:
+    build: ./flask
+    ports:
+      - "8080:3000"
+    links:
+      - flask_secret
+  flask_secret:
+    build: ./flask.secret
+    hostname: flask.secret
+    environment:
+      FLAG: "flag{y0u_just_have_a_lot_of_fr33_time}"
+  alpine1:
+    image: 'library/nginx:alpine'
+  alpine2:
+    image: 'library/nginx:alpine'
+  alpine3:
+    image: 'library/nginx:alpine'
+  alpine4:
+    image: 'library/nginx:alpine'
+  alpine5:
+    image: 'library/nginx:alpine'
+  alpine6:
+    image: 'library/nginx:alpine'
+  alpine7:
+    image: 'library/nginx:alpine' 
+  alpine8:
+    image: 'library/nginx:alpine'
+  alpine9:
+    image: 'library/nginx:alpine'
+  alpine10:
+    image: 'library/nginx:alpine'             

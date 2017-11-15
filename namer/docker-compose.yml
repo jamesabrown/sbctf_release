@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  namers:
+    build: .
+    ports:
+      - "7001:4567"

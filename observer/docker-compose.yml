@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  observer:
+    build: .
+    ports:
+      - "8345:80"
